@@ -14,12 +14,12 @@ int main()
 
     int zufallszahl = rand() % 100 + 1;
 
-    int anzahlDerVersuche = 7;
+    constexpr int ANZAHL_DER_VERSUCHE = 7;
 
     cout << endl << "Erraten Sie die Zahl zwischen 1 und 100!" << endl;
     cout << endl << "Sie haben 7 Versuche." << endl;
 
-    for (int i = 1; i <= anzahlDerVersuche; i++)
+    for (int i = 1; i <= ANZAHL_DER_VERSUCHE; i++)
     {
         int nummer;
         cout << endl << "Ihr " << i << ". Versuch: ";
@@ -36,7 +36,7 @@ int main()
             cout << endl << "Herzliche Glückwünsche! Sie haben die Zahl erraten!" << endl;
             break;
         }
-        else if (i == anzahlDerVersuche)
+        else if (i == ANZAHL_DER_VERSUCHE)
         {
             cout << endl << "Leider, Sie haben die Zahl nicht erraten." << endl;
             cout << endl << "Die erratene Zahl lautet: " << zufallszahl << endl;
